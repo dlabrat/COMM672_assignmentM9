@@ -68,18 +68,61 @@ nav li a {
 .submenu {
     display: none;
     flex-direction: column;
-    position: absolute;
+    position: absolute; 
     left: 0;
     background-color: #fff;
     border: 1px solid #efefef;
-    padding: 10px 10px 10px 10px; 
+    padding: 10px 5px 10px 5px; 
     margin: 10px;
-    gap: 15px;
     border-radius: 20px;
     width: 140px;
+    gap: 15px;
     align-items: flex-start;
 }
 nav li:hover >.submenu {
     display: flex;
     cursor: pointer;
+}
+@media (max-width: 767px){
+    header nav {
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        left:0;
+    }
+     header nav ul {
+        flex-direction: column;
+        background-color: #efefef;
+        padding: 0;
+        gap: 0;
+        border-top: 1px solid #fff; 
+    }
+    header nav li {
+        text-align:center;
+        border-bottom: 1px solid #fff;
+        width:100%;
+    }
+    nav li a {
+        display: block;
+        padding: 20px;
+        width: 100%; 
+    }
+    nav .button {
+        width: 100%;
+        border-radius: 0;
+        display: block;
+        padding: 20px;
+    }
+    header .container nav a:first-child  {
+        width: 100%;
+    }
+    .submenu {
+        display: flex;
+        position: relative; 
+        border-radius: 0;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0; 
+        align-items: center;
+    }
 }
