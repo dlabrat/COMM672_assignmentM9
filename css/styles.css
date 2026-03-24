@@ -83,6 +83,9 @@ nav li:hover >.submenu {
     display: flex;
     cursor: pointer;
 }
+.navTog, .navTogMenu {
+    display: none; 
+}
 @media (max-width: 767px){
     header nav {
         position: absolute;
@@ -124,5 +127,17 @@ nav li:hover >.submenu {
         margin: 0;
         padding: 10px 0; 
         align-items: center;
+    }
+    .navTogMenu {
+        display: block;
+    }
+    .navTogMenu img {
+        width: 30px;
+    }
+    .menuClose, nav, .navTog:checked ~ .navTogMenu .menuOpen {
+        display: none;
+    }
+    .navTog:checked ~ nav, .navTog:checked ~ .navTogMenu .menuClose {
+        display: block; 
     }
 }
